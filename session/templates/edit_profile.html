@@ -1,0 +1,10 @@
+{% extends "base_form.html" %}
+{% load i18n %}
+
+{% block formtitle %}
+  {% trans "Edit profile" %}
+{% endblock %}
+
+{% block formaction %}/session/profile/edit/{% endblock %}
+
+{% block submittitle %}{% trans "Save changes" %}{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base_form.html" %}
+
+{% load url from future %}
+{% load i18n %}
+
+{% block customcss %}
+  <style type="text/css">
+    #form_container {
+        width: 600px;
+        min-width: 600px;
+    }
+  </style>
+{% endblock %}
+
+{% block formtitle %}
+  {% trans "Register" %}
+{% endblock %}
+
+{% block formaction %}/session/register/{% endblock %}
+
+{% block submittitle %}{% trans "Create account" %}{% endblock %}

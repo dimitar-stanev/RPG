@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block extracss %}
+  <style type="text/css">
+    #form_container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        width: 400px;
+        min-width: 400px;
+    }
+
+    #form_container h2 {
+        padding: 5px 15px;
+        color: #CECECE;
+        font-size: 1.2em;
+    }
+
+    #form_container form {
+        margin: 10px;
+        height: 100%;
+        padding-bottom : 5px;
+        padding-top : 0px;
+        border-right : 1px solid grey;
+        border-left : 1px solid grey;
+        border-bottom : 1px solid grey;
+        color : #CECECE;
+    }
+
+    #form_container form p {
+        margin: 10px;
+        overflow: hidden;
+    }
+
+    #fields input, #fields select {
+        float: right;
+    }
+
+    #fields label {
+        float: left;
+    }
+
+    #submit {
+        width: 100%;
+        height: 40px;
+    }
+
+    #submit input {
+        -moz-box-shadow:inset 0px 0px 0px 0px #ffffff;
+        -webkit-box-shadow:inset 0px 0px 0px 0px #ffffff;
+        box-shadow:inset 0px 0px 0px 0px #ffffff;
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+        background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+        background-color:#ededed;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+        border:2px solid #dcdcdc;
+        display:inline-block;
+        color:#777777;
+        padding-left : 5px;
+        padding-right : 5px;
+        font-family:arial;
+        font-size:15px;
+        font-weight:bold;
+        text-align : center;
+        text-decoration:none;
+        text-shadow:1px 1px 0px #ffffff;
+        height : 30px;
+        float : right;
+        margin-right : 10px;
+        margin-top: 5px;
+    }
+    
+    .helptext {
+        float: right;
+        font-size: 0.8em;
+        clear: both;
+        margin-bottom: 8px;
+    }
+
+    .errorlist {
+        clear: both;
+        color: red;
+    }
+  </style>
+
+{% endblock extracss %}
+
+{% block content %}
+  {% block extramessage %}{% endblock %}
+
+  <div id="form_container">
+    <h2>{% block formtitle %}{% endblock %}</h2>
+    <form {% if form.is_multipart %}enctype="multipart/form-data"{% endif %} method="post" action="{% block formaction %}{% endblock %}">
+      {% csrf_token %}
+      <div id="fields">
+        {{ form.as_p }}
+      </div>
+      <div id="submit">
+        <input type="submit" value="{% block submittitle %}{% endblock %}" />
+      </div>
+      {% block formhidden %}{% endblock %}
+    </form>
+  </div>
+{% endblock content %}

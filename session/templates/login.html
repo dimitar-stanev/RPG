@@ -1,0 +1,18 @@
+{% extends "base_form.html" %}
+
+{% load url from future %}
+{% load i18n %}
+
+{% block formtitle %}
+  {% trans "Log in" %}
+{% endblock %}
+
+{% block formaction %}
+  {% url 'django.contrib.auth.views.login' %}
+{% endblock %}
+
+{% block submittitle %}{% trans "Log in" %}{% endblock %}
+
+{% block formhidden %}
+  <input type="hidden" name="next" value="{{ next|default:'/rpg_game/home' }}" />
+{% endblock %}

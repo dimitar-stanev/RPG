@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ title|default:"M&M" }}</title>
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" />
+
+  {% block extracss %}{% endblock extracss %}
+  {% block extrajs %}{% endblock extrajs %}
+  {% block customcss %}{% endblock customcss%}
+</head>
+
+<body>
+  <div id="wrapper">
+  <div class="toolbar" style="float:left; border-right : 1px solid black; border-top: 1px solid black; border-bottom:1px solid black; border-top-right-radius: 10px;
+  ul {
+  list-style-type:none;
+}">      
+
+    {% if user.is_authenticated %}
+      <div id="greeting"><div id="greetingText"><span>{% trans "Hello" %}, </span><a href="/session/profile/edit">{{ user.username }}</a></div></div>
+    {% endif %}
+    <div>
+      {% if user.is_authenticated %}
+        <ul> 
+        <li><button class="menuButton" onclick="window.location.href='/rpg_game/home'">{% trans "Home" %}</button></li>
+        <li><button class="menuButton" onclick="window.location.href='/session/profile/edit'">{% trans "Edit profile" %}</button></li>
+        <li><button class="menuButton" onclick="window.location.href='/session/profile/edit/change_password'">{% trans "Change password" %}</button></li>
+        <li><button class="menuButton" onclick="window.location.href='/session/logout'">{% trans "Log out" %}</button></li>
+        </ul>
+      {% else %}
+      <div id="filler"> </div>
+      <ul>
+        <li><button class="menuButton" onclick="window.location.href='/session/login'">{% trans "Log in" %}</button></li>
+        <li><button class="menuButton" onclick="window.location.href='/session/register'">{% trans "Registration" %}</button></li>
+      </ul>
+
+      {% endif %}
+    </div>
+  </div>
+  <div id="display-wrapper">
+    <header>
+      <h1>
+      </h1>
+      <nav>
+        <!-- TODO -->
+      </nav>
+    </header>
+    <div id="content">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </div>
+  </div>
+</body>
+</html>

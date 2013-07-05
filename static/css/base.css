@@ -1,0 +1,572 @@
+/*RESETS*/
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset, img {
+    border:0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style:normal;
+    font-weight:normal;
+}
+caption, th {
+    text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size:100%;
+    font-weight:bold;
+}
+strong {
+    font-weight:bold;
+}
+a img {
+    border:none;
+}
+.clearfix {
+    clear: both;
+}
+/* END RESETS */
+
+body {
+    width : 100%;
+    background-image : url('../image/background.jpg');
+}
+
+.errorMessage{
+    font-size : 1.2em;
+    color : red;
+}
+h2#galleryDescription {
+    color : #CECECE;
+    font-size : 20px;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.toolbar {
+    background-image: url('../image/gradient-image.jpg');
+    background-size : 120% auto;
+    height: 100%;
+    width : 160px;
+    display : block;
+    float : left;
+    position : absolute;
+    font-size : 20px;
+    border-right : 1px solid grey;
+    padding-right : 10px;
+}
+div#filler {
+height : 64px;
+}
+.toolbar img {
+padding-left : 10px;
+padding-top : 10px;
+}
+
+#greeting {
+    width: auto;
+    height : 64px;
+    text-align : left;
+}
+
+#greeting span {
+    font-size : 0.8em;
+    margin-left: 10px;
+    color: #CECECE;
+    font-family : "Lucida Console", Monaco, monospace;
+
+}
+#greetingText{
+    border-right : 1px solid grey;
+    border-left : 1px solid grey;
+    margin-left : 10px;
+    text-align : center;
+    font-size : 0.8em;
+}
+#greeting a {
+    text-align : left;
+    text-transform: none;
+    font-size: 0.8em;
+    font-weight: normal;
+    margin-top: 6px;
+    color: #CECECE;
+    font-family : "Lucida Console", Monaco, monospace;
+    text-decoration : underline;
+
+}
+
+#wrapper {
+    width : 100%;
+    height: 100%;
+}
+
+
+.toolbar div ul li a {
+    font-size : 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left : 10px;
+    color: #CECECE;
+    font-family : "Lucida Console", Monaco, monospace;
+    text-indent : 0px;
+}
+.toolbar div ul li a p{
+text-indent : 0px;
+}
+.toolbar div ul{
+    text-align : center;
+    padding-top : 30px;
+    list-style : none;
+    border : 1px solid grey;
+    border-radius : 10px;
+    padding-bottom: 10px;
+    margin-left : 10px;
+    list-style-position : outside;
+    padding-left: auto;
+    padding-right : auto;
+
+}
+.toolbar div ul li {
+    margin-left : 0px;
+}
+.toolbar div a:hover {
+    color: #ffffff;
+}
+
+#display-wrapper{
+    width: 100%-150px;
+    margin-left: 180px;
+    margin-right: 0px;
+
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    /* border-bottom: 2px solid #000000; */
+}
+
+header h1 {
+    margin-left: 20px;
+    margin-top : 15px;
+    font-size: 4em;
+    font-family: century gothic,verdana,arial,helvetica,sans-serif;
+    float: left;
+}
+
+header a, header a:visited, header a:hover, header a:active {
+    color: #000000;
+}
+
+nav a:hover, nav a:active {
+    padding-bottom: 3px;
+    border-bottom: 2px solid #000000;
+}
+
+nav {
+    width : 100%;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #eeee00;
+    float:right;
+    position : relative;
+    margin-bottom : 10px;
+    padding-left : 50px;
+}
+
+nav button:first-child{
+    margin-left: 30px;
+}
+
+h1#title {
+    width: 100%-20px;
+    margin-top : 10px;
+    margin-bottom: 20px;
+    padding : 20px;
+    color: #CECECE;
+    background-image: url('../image/gradient-image2.jpg');
+    background-size : 15%;
+    border : 1px solid grey;
+    border-radius : 10px;
+    vertical-align : center;
+    margin-right : 20px;
+}
+h1#title2 {
+    width: 100%-20px;
+    margin-top : 10px;
+    margin-bottom: 2px;
+    padding : 20px;
+    color: #CECECE;
+    background-image: url('../image/gradient-image2.jpg');
+    background-size : 15%;
+    border : 1px solid grey;
+    border-radius : 10px;
+    vertical-align : center;
+    margin-right : 20px;
+    font-size : 1.5em;
+}
+
+
+#title button#addCategoryButton {
+    float : right;
+    position : relative;
+}
+
+#title a:hover, #title a:active {
+    padding-bottom: 3px;
+    margin-right: 20px;
+    color:white;
+}
+
+section#categories {
+    position: relative;
+    float: left;
+    display: block;
+    width: 170px;
+    margin-left : 20px;
+}
+
+section#pictures {
+    color : #CECECE;
+}
+
+section#categories h2 {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    background-image: url('../image/gradient-image2.jpg');
+    background-size : 130%;
+    color: #CECECE;
+    border: 1px solid grey;
+    border-radius : 10px;
+}
+
+section#categories div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+section#categories a {
+    color : #CECECE;
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+section#categories a:hover, section#categories a:active, section#categories a.active {
+   background-color: #000000;
+}
+
+section#categories a.active {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+
+table#categories_table tr.t_header {
+    background-image: url('../image/gradient-image2.jpg');
+    background-size : 70%;    
+    height: 40px;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-radius : 10px;
+}
+
+table#categories_table tr.t_header th {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: bold;
+    color: #CECECE;
+    text-align: center;
+    border-right: 1px solid grey;
+}
+
+table#categories_table tr td {
+    padding: 3px 8px 3px 8px;
+    text-align: center;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+table#categories_table tr td a {
+    display: block;
+    color: black;
+}
+
+table#categories_table tr.even td a:hover, table#categories_table tr.even td a:active {
+    color: white;
+    text-decoration : underline;
+}
+
+table#categories_table tr.odd td a:hover, table#categories_table tr.odd td a:active {
+    color: white;
+    text-decoration : underline;
+}
+
+table#categories_table tr td.left {
+    text-align: left;
+}
+
+table#categories_table tr.even {
+    background-color: #D1D1D1;
+}
+
+table#categories_table tr.odd {
+    background-color: #BFBFBF;
+}
+
+.content {
+    float: left;
+    width: 80%;
+    margin-left: 20px;
+    margin-right : 20px;
+}
+
+#welcomePage{
+    width : auto;
+    border-left : 1px solid grey;
+    border-right : 1px solid grey;
+    border-bottom : 1px solid grey;
+    margin-right : 20px;
+    margin-top : 0;
+    color : #CECECE;
+    font-size : 1.2em;
+    padding : 10px;
+}
+div#category h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: #CECECE;
+    background-image: url('../image/gradient-image2.jpg');
+    background-size : 20% auto;
+    border : 1px solid grey;
+    border-radius : 10px;
+}
+
+div#category a#delete, div#category a#edit {
+    color: #CECECE;
+    float: right;
+    margin-right: 20px;
+}
+
+div#category a#delete:hover, div#category a#delete:active, div#category a#edit:hover, div#category a#edit:active {
+    padding-bottom: 3px;
+    margin-right: 20px;
+    text-decoration : underline;
+    color : white;
+}
+
+h3 {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid grey;
+    color : #CECECE;
+}
+section#subcategories {
+    color : #CECECE;
+}
+section#subcategories a {
+    color : #CECECE;
+    display: block;
+    line-height: 1.5;
+}
+
+section#subcategories a:hover, section#subcategories a:active {
+    color: white;
+}
+
+div.image {
+    position: relative;
+    float: left;
+    width: 157px;
+    height: 181px;
+    background-color: grey;
+    margin: 0px 23px 26px 23px;
+    padding: 3px 3px 3px 3px;
+    color : #CECECE;
+}
+.current {
+color : white;
+}
+div.image img {
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+div.image span {
+    display: block;
+    color: white;
+    padding-bottom: 4px;
+    margin-left: 4px;
+    font-size: 14px;
+}
+
+.edit_button {
+    position: absolute;
+}
+
+.delete_button {
+    right: 0px;
+    position: absolute;
+}
+
+.action {
+    display: none;
+}
+
+span.blank {
+    display: block;
+    margin-bottom: 15px;
+}
+
+ul.decorated li{
+    list-style-type:disc;
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+ul.decorated li ul li{
+    list-style-type:circle;
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+a.decoration {
+    color: blue;
+    margin-left: 20px;
+    text-decoration:underline;
+}
+
+.navButton {
+	-moz-box-shadow:inset 0px 0px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #ffffff;
+	box-shadow:inset 0px 0px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+    padding-left : 5px;
+    padding-right : 5px;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+    text-align : center;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+    height : 30px;
+}
+.navButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}
+.navButton:active {
+	position:relative;
+	top:1px;
+
+}
+div #form_container{
+
+}
+
+div #form_container h2{
+    color : #CECECE;
+    background-image: url('../image/gradient-image2.jpg');
+    background-size : 60% auto;
+    border : 1px grey solid;
+    border-radius : 10px;
+}
+.menuButton {
+	-moz-box-shadow:inset 0px 0px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #ffffff;
+	box-shadow:inset 0px 0px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+    padding-left : 2px;
+    padding-right : 2px;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+    text-align : center;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+    height : 40px;
+    margin-bottom : 20px;
+    width : 80%;
+}
+
+.menuButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}
+.menuButton:active {
+	position:relative;
+	top:1px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
